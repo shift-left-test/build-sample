@@ -27,21 +27,21 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
     $ bitbake-layers test-layers --add
 
-## How to build
-
-    $ bitbake core-image-minimal
-
-## How to run tests
+## How to run all tests
 
     $ bitbake core-image-minimal -c testall
 
-## How to measure the code coverage metrics
+## How to measure the code coverage metrics for all
 
     $ bitbake core-image-minimal -c coverageall
     
 ## How to disable tests
 
     $ bitbake-layers test-layers --remove
+
+## How to build the image
+
+    $ bitbake core-image-minimal
 
 # Notice
 
