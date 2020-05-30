@@ -2,7 +2,7 @@
 
 [![Build Status](http://10.177.233.77:8080/buildStatus/icon?job=build-sample)](http://10.177.233.77:8080/job/build-sample/)
 
-> Sample Project Build Layer
+> Sample Project Build Layer for meta-shift project
 
 
 ## About
@@ -21,7 +21,7 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
     $ docker run --rm -it cart.lge.com/swte/yocto:ubuntu-16.04
     $ git clone --recurse-submodules http://mod.lge.com/hub/yocto/build-sample.git
-    $ TEMPLATECONF=`pwd`/build-template source poky/oe-init-build-env
+    $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
 
 ## How to enable tests
 
@@ -34,7 +34,7 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 ## How to measure the code coverage metrics for all
 
     $ bitbake core-image-minimal -c coverageall
-    
+
 ## How to disable tests
 
     $ bitbake-layers test-layers --remove
@@ -42,6 +42,7 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 ## How to build the image
 
     $ bitbake core-image-minimal
+
 
 # Notice
 

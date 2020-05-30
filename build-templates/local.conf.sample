@@ -45,7 +45,7 @@ MACHINE ?= "qemuarm64"
 #
 # The default is a downloads directory under TOPDIR which is the build directory.
 #
-#DL_DIR ?= "${TOPDIR}/downloads"
+DL_DIR ?= "${TOPDIR}/build-res/downloads"
 
 #
 # Where to place shared-state files
@@ -61,7 +61,7 @@ MACHINE ?= "qemuarm64"
 #
 # The default is a sstate-cache directory under TOPDIR.
 #
-#SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+SSTATE_DIR ?= "${TOPDIR}/build-res/sstate-cache"
 
 #
 # Where to place the build output
@@ -212,19 +212,8 @@ BB_DISKMON_DIRS ??= "\
 # NOTE: if the mirror uses the same structure as SSTATE_DIR, you need to add PATH
 # at the end as shown in the examples below. This will be substituted with the
 # correct path within the directory structure.
-PREMIRRORS = "\
-    cvs://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    svn://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    git://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    gitsm://.*/.*   http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    hg://.*/.*      http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    bzr://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    p4://.*/.*      http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    osc://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    https?$://.*/.* http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    ftp://.*/.*     http://cart.lge.com/list/yocto-mirrors/downloads/ \n \
-    npm://.*/?.*    http://cart.lge.com/list/yocto-mirrors/downloads/ \n"
-
+INHERIT += "own-mirrors"
+SOURCE_MIRROR_URL = "http://cart.lge.com/list/yocto-mirrors/downloads"
 SSTATE_MIRRORS = "file://.* http://cart.lge.com/list/yocto-mirrors/sstate-cache/PATH"
 
 #
@@ -249,6 +238,8 @@ IMAGE_INSTALL_append = " \
     sqlite3logger \
     cpp-project-qt5 \
     cpp-project-autotools"
+
+BB_GENERATE_MIRROR_TARBALLS ?= "0"
 
 BB_NUMBER_THREADS = "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE = "-j ${@oe.utils.cpu_count()}"
