@@ -233,11 +233,11 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 CONF_VERSION = "1"
 
 IMAGE_INSTALL_append = " \
-    sample-project \
-    cpp-project \
+    cmake-project \
+    qmake5-project \
+    autotools-project \
     sqlite3logger \
-    cpp-project-qt5 \
-    cpp-project-autotools"
+"
 
 BB_GENERATE_MIRROR_TARBALLS ?= "0"
 
