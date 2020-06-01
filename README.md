@@ -21,6 +21,7 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
     $ docker run --rm -it cart.lge.com/swte/yocto:ubuntu-16.04
     $ git clone --recurse-submodules http://mod.lge.com/hub/yocto/build-sample.git
+    & cd build-sample
     $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
 
 ## How to enable tests
