@@ -247,3 +247,4 @@ PARALLEL_MAKE = "-j ${@oe.utils.cpu_count()}"
 
 TEST_RESULT_OUTPUT = "${TOPDIR}/report/test_result"
 TEST_COVERAGE_OUTPUT = "${TOPDIR}/report/test_coverage"
+CHECK_CODE_OUTPUT = "${TOPDIR}/report/check_code"
