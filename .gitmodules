@@ -1,24 +1,24 @@
 [submodule "poky"]
 	path = poky
 	url = http://mod.lge.com/hub/yocto/mirror/poky.git
-	branch = pyro
+	branch = rocko
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = http://mod.lge.com/hub/yocto/mirror/meta-openembedded.git
-	branch = pyro
+	branch = rocko
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = http://mod.lge.com/hub/yocto/mirror/meta-qt5.git
-	branch = pyro
+	branch = rocko
 [submodule "meta-sample"]
 	path = meta-sample
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample.git
-	branch = pyro
+	branch = rocko
 [submodule "meta-sample-test"]
 	path = meta-sample-test
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample-test.git
-	branch = pyro
+	branch = rocko
 [submodule "meta-shift"]
 	path = meta-shift
 	url = http://mod.lge.com/hub/yocto/meta-shift.git
-	branch = pyro
+	branch = rocko
