@@ -102,7 +102,7 @@ DISTRO ?= "poky"
 #  - 'package_rpm' for rpm style packages
 # E.g.: PACKAGE_CLASSES ?= "package_rpm package_deb package_ipk"
 # We default to rpm:
-PACKAGE_CLASSES ?= "package_rpm"
+PACKAGE_CLASSES ?= "package_ipk"
 
 #
 # SDK target architecture
@@ -135,7 +135,7 @@ PACKAGE_CLASSES ?= "package_rpm"
 # There are other application targets that can be used here too, see
 # meta/classes/image.bbclass and meta/classes/core-image.bbclass for more details.
 # We default to enabling the debugging tweaks.
-EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+EXTRA_IMAGE_FEATURES ?= ""
 
 #
 # Additional image features
@@ -149,7 +149,7 @@ EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
 #   - 'image-swab' to perform host system intrusion detection
 # NOTE: if listing mklibs & prelink both, then make sure mklibs is before prelink
 # NOTE: mklibs also needs to be explicitly enabled for a given image, see local.conf.extended
-USER_CLASSES ?= "buildstats image-mklibs image-prelink"
+USER_CLASSES ?= ""
 
 #
 # Runtime testing of images
@@ -239,6 +239,8 @@ IMAGE_INSTALL_append = " \
     humidifier-project \
     sqlite3logger \
 "
+
+INHIBIT_PACKAGE_DEBUG_SPLIT ?= "1"
 
 BB_GENERATE_MIRROR_TARBALLS ?= "0"
 
