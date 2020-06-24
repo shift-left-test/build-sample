@@ -244,9 +244,9 @@ INHIBIT_PACKAGE_DEBUG_SPLIT ?= "1"
 
 BB_GENERATE_MIRROR_TARBALLS ?= "0"
 
-BB_NUMBER_THREADS = "${@oe.utils.cpu_count()}"
-PARALLEL_MAKE = "-j ${@oe.utils.cpu_count()}"
+BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
+PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
-TEST_RESULT_OUTPUT = "${TOPDIR}/report/test_result"
-TEST_COVERAGE_OUTPUT = "${TOPDIR}/report/test_coverage"
-CHECK_CODE_OUTPUT = "${TOPDIR}/report/check_code"
+TEST_RESULT_OUTPUT ?= "${TOPDIR}/report/test_result"
+TEST_COVERAGE_OUTPUT ?= "${TOPDIR}/report/test_coverage"
+CHECK_CODE_OUTPUT ?= "${TOPDIR}/report/check_code"
