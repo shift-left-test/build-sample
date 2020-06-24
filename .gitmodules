@@ -1,24 +1,28 @@
 [submodule "poky"]
 	path = poky
 	url = http://mod.lge.com/hub/yocto/mirror/poky.git
-	branch = sumo
+	branch = thud
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = http://mod.lge.com/hub/yocto/mirror/meta-openembedded.git
-	branch = sumo
+	branch = thud
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = http://mod.lge.com/hub/yocto/mirror/meta-qt5.git
-	branch = sumo
+	branch = thud
 [submodule "meta-sample"]
 	path = meta-sample
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample.git
-	branch = sumo
+	branch = thud
 [submodule "meta-sample-test"]
 	path = meta-sample-test
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample-test.git
-	branch = sumo
+	branch = thud
 [submodule "meta-shift"]
 	path = meta-shift
 	url = http://mod.lge.com/hub/yocto/meta-shift.git
-	branch = sumo
+	branch = thud
+[submodule "meta-raspberrypi"]
+	path = meta-raspberrypi
+	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
+	branch = thud
