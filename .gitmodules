@@ -22,3 +22,7 @@
 	path = meta-shift
 	url = http://mod.lge.com/hub/yocto/meta-shift.git
 	branch = pyro
+[submodule "meta-raspberrypi"]
+	path = meta-raspberrypi
+	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
+	branch = pyro

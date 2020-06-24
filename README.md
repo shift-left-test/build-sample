@@ -1,6 +1,6 @@
 # build-sample
 
-[![Build Status](http://10.177.233.77:8080/buildStatus/icon?job=build-sample)](http://10.177.233.77:8080/job/build-sample/)
+[![Build Status](http://10.177.233.77:8080/buildStatus/icon?job=build-sample-with-multi-configurations)](http://10.177.233.77:8080/job/build-sample-with-multi-configurations/)
 
 > Sample Project Build Layer for meta-shift project
 
