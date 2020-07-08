@@ -1,28 +1,28 @@
 [submodule "poky"]
 	path = poky
 	url = http://mod.lge.com/hub/yocto/mirror/poky.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = http://mod.lge.com/hub/yocto/mirror/meta-openembedded.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = http://mod.lge.com/hub/yocto/mirror/meta-qt5.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-sample"]
 	path = meta-sample
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-sample-test"]
 	path = meta-sample-test
 	url = http://mod.lge.com/hub/yocto/sample/meta-sample-test.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-shift"]
 	path = meta-shift
 	url = http://mod.lge.com/hub/yocto/meta-shift.git
-	branch = zeus
+	branch = dunfell
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
-	branch = zeus
+	branch = dunfell
