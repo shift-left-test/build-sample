@@ -2,7 +2,7 @@
 
 [![Build Status](http://10.177.233.77:8080/buildStatus/icon?job=build-sample-with-multi-configurations)](http://10.177.233.77:8080/job/build-sample-with-multi-configurations/)
 
-> Sample Project Build Layer for meta-shift project
+> Build Sample Project for meta-shift project
 
 
 ## About
@@ -21,28 +21,80 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
     $ docker run --rm -it cart.lge.com/swte/yocto:16.04
     $ git clone --recurse-submodules http://mod.lge.com/hub/yocto/build-sample.git
-    & cd build-sample
+    $ cd build-sample
     $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
+
 
 ## How to enable tests
 
     $ bitbake-layers test-layers --add
 
-## How to run all tests
+## How to find testable recipes
 
+    $ bitbake-layers test-recipes
+
+
+## How to run tests per module
+
+    $ bitbake cmake-project -c test
+
+
+## How to measure code coverage per module
+
+    $ bitbake qmake5-project -c coverage
+
+
+## How to perform static analysis per module
+
+    $ bitbake autotools-project -c checkcode
+
+
+## How to run tests for all relevant modules
+
+    $ bitbake sqlite3logger -c testall
     $ bitbake core-image-minimal -c testall
 
-## How to measure the code coverage metrics for all
 
+## How to measure code coverage metrics for all relevant modules
+
+    $ bitbake sqlite3logger -c coverageall
     $ bitbake core-image-minimal -c coverageall
+
+
+## How to perform static code analysis for all relevant modules
+
+    $ bitbake sqlite3logger -c checkcodeall
+    $ bitbake core-image-minimal -c checkcodeall
+
 
 ## How to disable tests
 
     $ bitbake-layers test-layers --remove
 
-## How to build the image
 
-    $ bitbake core-image-minimal
+# Additional Features
+
+## How to find testable recipes
+
+    $ bitbake-layers test-recipes
+    $ bitbake-layers test-recipes cmake*
+
+> You can use wildcard(&,*) for specified search.
+
+
+## How to find test meta-layers
+
+    $ bitbake-layers test-layers
+
+
+## How to show recipe information
+
+    $ recipetool inspect cmake-project
+
+
+## How to lint Bitbake recipes
+
+    $ recipetool check qmake5-project
 
 
 # Notice
