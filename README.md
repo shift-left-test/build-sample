@@ -19,7 +19,7 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
 ## How to prepare the workspace
 
-    $ docker run --rm -it cart.lge.com/swte/yocto:16.04
+    $ docker run --rm -it cart.lge.com/swte/yocto:14.04
     $ git clone --recurse-submodules http://mod.lge.com/hub/yocto/build-sample.git
     $ cd build-sample
     $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
@@ -27,12 +27,12 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
 ## How to enable tests
 
-    $ bitbake-layers test-layers --add
+    $ recipetool test-layers --add
 
 
 ## How to find testable recipes
 
-    $ bitbake-layers test-recipes
+    $ recipetool test-recipes
 
 
 ## How to run tests per module
@@ -70,22 +70,22 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
 ## How to disable tests
 
-    $ bitbake-layers test-layers --remove
+    $ recipetool test-layers --remove
 
 
 # Additional Features
 
 ## How to find testable recipes
 
-    $ bitbake-layers test-recipes
-    $ bitbake-layers test-recipes cmake*
+    $ recipetool test-recipes
+    $ recipetool test-recipes cmake*
 
 > You can use wildcard(&,*) for specified search.
 
 
 ## How to find test meta-layers
 
-    $ bitbake-layers test-layers
+    $ recipetool test-layers
 
 
 ## How to show recipe information
