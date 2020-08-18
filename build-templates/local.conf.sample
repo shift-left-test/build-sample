@@ -248,3 +248,5 @@ BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
 TEST_REPORT_OUTPUT ?= "${TOPDIR}/report"
+
+PACKAGECONFIG_append_pn-qtbase = " accessibility"
