@@ -5,13 +5,6 @@ pipeline {
 	}
     }
     stages {
-	stage("Setup") {
-	    steps {
-		updateGitlabCommitStatus name: "jenkins", state: "running"
-		sh "git clean -fdx"
-		sh "git submodule update --init"
-	    }
-	}
 	stage("Test") {
 	    steps {
 		sh """
@@ -23,15 +16,4 @@ pipeline {
 	    }
 	}
     }  // stages
-    post {
-    	success {
-            updateGitlabCommitStatus name: "jenkins", state: "success"
-        }
-        failure {
-            updateGitlabCommitStatus name: "jenkins", state: "failed"
-        }
-	aborted {
-	    updateGitlabCommitStatus name: "jenkins", state: "canceled"
-	}
-    }  // post
 }  // pipeline
