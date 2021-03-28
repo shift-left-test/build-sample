@@ -16,4 +16,9 @@ pipeline {
             }
         }
     }  // stages
+    post {
+        always {
+            cleanWs disableDeferredWipeout: true
+        }
+    }  // post
 }  // pipeline
