@@ -1,6 +1,6 @@
 # build-sample
 
-[![Build Status](http://10.177.233.77:8080/buildStatus/icon?job=build-sample-with-multi-configurations)](http://10.177.233.77:8080/job/build-sample-with-multi-configurations/)
+[![Build Status](http://10.178.85.91:8080/buildStatus/icon?job=build-sample%2Fmorty)](http://10.178.85.91:8080/job/build-sample/job/morty/)
 
 > Build Sample Project for meta-shift project
 
