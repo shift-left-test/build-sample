@@ -26,3 +26,15 @@
 	path = meta-raspberrypi
 	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
 	branch = krogoth
+[submodule "meta-tegra"]
+	path = meta-tegra
+	url = http://mod.lge.com/hub/yocto/mirror/meta-tegra.git
+	branch = krogoth
+[submodule "meta-ti"]
+	path = meta-ti
+	url = http://mod.lge.com/hub/yocto/mirror/meta-ti.git
+	branch = krogoth
+[submodule "meta-intel"]
+	path = meta-intel
+	url = http://mod.lge.com/hub/yocto/mirror/meta-intel.git
+	branch = krogoth
