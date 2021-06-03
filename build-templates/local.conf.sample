@@ -250,3 +250,5 @@ PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 SHIFT_REPORT_DIR ?= "${TOPDIR}/report"
 
 PACKAGECONFIG_append_pn-qtbase = " accessibility"
+
+ACCEPT_FSL_EULA = "1"
