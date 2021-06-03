@@ -248,3 +248,5 @@ BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
 SHIFT_REPORT_DIR ?= "${TOPDIR}/report"
+
+ACCEPT_FSL_EULA = "1"
