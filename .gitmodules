@@ -26,3 +26,19 @@
 	path = meta-raspberrypi
 	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
 	branch = zeus
+[submodule "meta-tegra"]
+	path = meta-tegra
+	url = http://mod.lge.com/hub/yocto/mirror/meta-tegra.git
+	branch = zeus
+[submodule "meta-freescale"]
+	path = meta-freescale
+	url = http://mod.lge.com/hub/yocto/mirror/meta-freescale.git
+	branch = zeus
+[submodule "meta-ti"]
+	path = meta-ti
+	url = http://mod.lge.com/hub/yocto/mirror/meta-ti.git
+	branch = zeus
+[submodule "meta-intel"]
+	path = meta-intel
+	url = http://mod.lge.com/hub/yocto/mirror/meta-intel.git
+	branch = zeus
