@@ -26,3 +26,15 @@
 	path = meta-raspberrypi
 	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
 	branch = pyro
+[submodule "meta-tegra"]
+	path = meta-tegra
+	url = http://mod.lge.com/hub/yocto/mirror/meta-tegra.git
+	branch = pyro
+[submodule "meta-freescale"]
+	path = meta-freescale
+	url = http://mod.lge.com/hub/yocto/mirror/meta-freescale.git
+	branch = pyro
+[submodule "meta-intel"]
+	path = meta-intel
+	url = http://mod.lge.com/hub/yocto/mirror/meta-intel.git
+	branch = pyro
