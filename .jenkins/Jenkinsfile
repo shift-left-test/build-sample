@@ -7,12 +7,21 @@ pipeline {
     stages {
         stage("Test") {
             steps {
-                sh """
-                TEMPLATECONF=`pwd`/build-templates . poky/oe-init-build-env
-                bitbake-layers add-layer ../meta-sample-test/
-                bitbake core-image-minimal
-                bitbake core-image-minimal -c coverageall
-                """
+                sh """#!/bin/bash
+                   TEMPLATECONF=${env.WORKSPACE}/build-templates source ${env.WORKSPACE}/poky/oe-init-build-env
+                   devtool show MACHINE
+                   devtool cache autoconf-native -fm
+                   bitbake-layers status
+                   bitbake-layers inspect meta
+                   bitbake-layers test-layers --add
+                   bitbake-layers test-recipes
+                   recipetool check core-image-minimal
+                   recipetool inspect core-image-minimal
+                   bitbake core-image-minimal
+                   bitbake core-image-minimal -c checkcodeall
+                   bitbake core-image-minimal -c testall
+                   bitbake core-image-minimal -c coverageall
+                   """
             }
         }
     }  // stages
