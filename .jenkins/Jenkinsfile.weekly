@@ -26,14 +26,23 @@ pipeline {
                             BB_GENERATE_MIRROR_TARBALLS = "1"
                         }
                         steps {
-                            sh '''
-                            TEMPLATECONF=`pwd`/build-templates . poky/oe-init-build-env
-                            export BB_ENV_EXTRAWHITE="$BB_ENV_EXTRAWHITE DL_DIR SSTATE_DIR BB_GENERATE_MIRROR_TARBALLS"
-                            bitbake-layers add-layer ../meta-sample-test
-                            bitbake core-image-minimal -c fetchall
-                            bitbake core-image-minimal
-                            bitbake core-image-minimal -c coverageall
-                            '''
+                            sh '''#!/bin/bash
+                               TEMPLATECONF=`pwd`/build-templates source ./poky/oe-init-build-env
+                               export BB_ENV_EXTRAWHITE="$BB_ENV_EXTRAWHITE DL_DIR SSTATE_DIR BB_GENERATE_MIRROR_TARBALLS"
+                               devtool show MACHINE
+                               devtool cache autoconf-native -fm
+                               bitbake-layers status
+                               bitbake-layers inspect meta
+                               bitbake-layers test-layers --add
+                               bitbake-layers test-recipes
+                               recipetool check core-image-minimal
+                               recipetool inspect core-image-minimal
+                               bitbake core-image-minimal --runall=fetch
+                               bitbake core-image-minimal
+                               bitbake core-image-minimal -c checkcodeall
+                               bitbake core-image-minimal -c testall
+                               bitbake core-image-minimal -c coverageall
+                               '''
                         }
                     }
                     stage("Cleanup") {
