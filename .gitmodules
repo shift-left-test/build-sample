@@ -38,3 +38,7 @@
 	path = meta-intel
 	url = http://mod.lge.com/hub/yocto/mirror/meta-intel.git
 	branch = hardknott
+[submodule "meta-clang"]
+	path = meta-clang
+	url = http://mod.lge.com/hub/yocto/mirror/meta-clang.git
+	branch = hardknott
