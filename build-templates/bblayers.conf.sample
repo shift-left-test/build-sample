@@ -17,6 +17,7 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-tegra \
   ##OEROOT##/../meta-freescale \
   ##OEROOT##/../meta-intel \
+  ##OEROOT##/../meta-clang \
   ##OEROOT##/../meta-qt5 \
   ##OEROOT##/../meta-shift \
   ##OEROOT##/../meta-sample \
