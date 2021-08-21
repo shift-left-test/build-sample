@@ -213,8 +213,8 @@ BB_DISKMON_DIRS ??= "\
 # at the end as shown in the examples below. This will be substituted with the
 # correct path within the directory structure.
 INHERIT += "own-mirrors"
-SOURCE_MIRROR_URL ?= "http://cart.lge.com/list/yocto-mirrors/downloads"
-SSTATE_MIRRORS ?= "file://.* http://cart.lge.com/list/yocto-mirrors/sstate-cache/PATH"
+SOURCE_MIRROR_URL ?= "http://cart.lge.com/list/yocto-mirrors/gatesgarth/downloads"
+SSTATE_MIRRORS ?= "file://.* http://cart.lge.com/list/yocto-mirrors/gatesgarth/sstate-cache/PATH"
 
 #
 # Qemu configuration
