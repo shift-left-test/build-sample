@@ -214,7 +214,7 @@ BB_DISKMON_DIRS ??= "\
 # correct path within the directory structure.
 INHERIT += "own-mirrors"
 SOURCE_MIRROR_URL ?= "http://10.177.237.78:9090/repository/build-res/jethro/downloads"
-SSTATE_MIRRORS ?= "http://10.177.237.78:9090/repository/build-res/jethro/sstate-cache/PATH"
+SSTATE_MIRRORS ?= "file://.* http://10.177.237.78:9090/repository/build-res/jethro/sstate-cache/PATH"
 
 #
 # Qemu configuration
