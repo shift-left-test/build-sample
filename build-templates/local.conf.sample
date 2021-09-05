@@ -234,7 +234,7 @@ CONF_VERSION = "1"
 
 IMAGE_INSTALL_append = " \
     cmake-project \
-    qmake5-project \
+    qmake-project \
     autotools-project \
     humidifier-project \
     sqlite3logger \
