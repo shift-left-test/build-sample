@@ -249,4 +249,6 @@ PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
 SHIFT_REPORT_DIR ?= "${TOPDIR}/report"
 
+SHIFT_TEST_SUPPRESS_FAILURES ?= "1"
+
 ACCEPT_FSL_EULA = "1"
