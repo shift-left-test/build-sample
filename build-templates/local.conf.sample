@@ -212,7 +212,7 @@ BB_DISKMON_DIRS ??= "\
 # NOTE: if the mirror uses the same structure as SSTATE_DIR, you need to add PATH
 # at the end as shown in the examples below. This will be substituted with the
 # correct path within the directory structure.
-INHERIT += "own-mirrors"
+INHERIT += "own-mirrors checkcache"
 SOURCE_MIRROR_URL ?= "http://10.177.237.78:9090/repository/build-res/zeus/downloads"
 SSTATE_MIRRORS ?= "file://.* http://10.177.237.78:9090/repository/build-res/zeus/sstate-cache/PATH"
 
