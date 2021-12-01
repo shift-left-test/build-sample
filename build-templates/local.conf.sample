@@ -212,9 +212,6 @@ BB_DISKMON_DIRS ??= "\
 # NOTE: if the mirror uses the same structure as SSTATE_DIR, you need to add PATH
 # at the end as shown in the examples below. This will be substituted with the
 # correct path within the directory structure.
-INHERIT += "own-mirrors checkcache"
-SOURCE_MIRROR_URL ?= "http://10.177.237.78:9090/repository/build-res/dunfell/downloads"
-SSTATE_MIRRORS ?= "file://.* http://10.177.237.78:9090/repository/build-res/dunfell/sstate-cache/PATH"
 
 #
 # Qemu configuration
@@ -256,3 +253,7 @@ SHIFT_CHECKTEST_LIMIT ?= "5"
 ACCEPT_FSL_EULA = "1"
 
 CONNECTIVITY_CHECK_URIS = ""
+
+INHERIT += "checkcache"
+
+include /etc/meta-shift/global.conf
