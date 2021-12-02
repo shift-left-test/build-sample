@@ -1,7 +1,5 @@
 # build-sample
 
-[![Build Status](http://10.178.85.91:8080/buildStatus/icon?job=build-sample%2Fwarrior)](http://10.178.85.91:8080/job/build-sample/job/warrior/)
-
 > Build Sample Project for meta-shift project
 
 
