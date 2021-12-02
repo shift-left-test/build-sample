@@ -1,7 +1,5 @@
 # build-sample
 
-[![Build Status](http://10.178.85.91:8080/buildStatus/icon?job=build-sample%2Fhardknott)](http://10.178.85.91:8080/job/build-sample/job/hardknott/)
-
 > Build Sample Project for meta-shift project
 
 
