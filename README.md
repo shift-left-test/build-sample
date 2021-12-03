@@ -10,15 +10,16 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 
 # Prerequisites
 
-* Docker (18.06.1 or above)
+## How to install the build host packages
+
+    $ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool
 
 
 # Usage
 
 ## How to prepare the workspace
 
-    $ docker run --rm -it cart.lge.com/swte/yocto:14.04
-    $ git clone --recurse-submodules http://mod.lge.com/hub/yocto/build-sample.git
+    $ git clone --recurse-submodules https://github.com/shift-left-test/build-sample.git
     $ cd build-sample
     $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
 
@@ -94,11 +95,6 @@ This project aims to provide the usage of meta-shift layer by providing the comp
 ## How to lint Bitbake recipes
 
     $ recipetool check qmake5-project
-
-
-# Notice
-
-You may refer to [meta-shift user guide](http://mod.lge.com/hub/yocto/meta-shift/-/wikis/home) for more information.
 
 
 # Licenses
