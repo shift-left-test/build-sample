@@ -1,44 +1,44 @@
 [submodule "poky"]
 	path = poky
-	url = http://mod.lge.com/hub/yocto/mirror/poky.git
+	url = https://git.yoctoproject.org/git/poky.git
 	branch = morty
 [submodule "meta-openembedded"]
 	path = meta-openembedded
-	url = http://mod.lge.com/hub/yocto/mirror/meta-openembedded.git
+	url = https://github.com/openembedded/meta-openembedded.git
 	branch = morty
 [submodule "meta-qt5"]
 	path = meta-qt5
-	url = http://mod.lge.com/hub/yocto/mirror/meta-qt5.git
+	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = morty
 [submodule "meta-sample"]
 	path = meta-sample
-	url = http://mod.lge.com/hub/yocto/sample/meta-sample.git
+	url = https://github.com/shift-left-test/meta-sample.git
 	branch = morty
 [submodule "meta-sample-test"]
 	path = meta-sample-test
-	url = http://mod.lge.com/hub/yocto/sample/meta-sample-test.git
+	url = https://github.com/shift-left-test/meta-sample-test.git
 	branch = morty
 [submodule "meta-shift"]
 	path = meta-shift
-	url = http://mod.lge.com/hub/yocto/meta-shift.git
+	url = https://github.com/shift-left-test/meta-shift.git
 	branch = morty
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
-	url = http://mod.lge.com/hub/yocto/mirror/meta-raspberrypi.git
+	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
 	branch = morty
 [submodule "meta-tegra"]
 	path = meta-tegra
-	url = http://mod.lge.com/hub/yocto/mirror/meta-tegra.git
+	url = https://github.com/OE4T/meta-tegra.git
 	branch = morty
 [submodule "meta-freescale"]
 	path = meta-freescale
-	url = http://mod.lge.com/hub/yocto/mirror/meta-freescale.git
+	url = https://git.yoctoproject.org/git/meta-freescale.git
 	branch = morty
 [submodule "meta-ti"]
 	path = meta-ti
-	url = http://mod.lge.com/hub/yocto/mirror/meta-ti.git
+	url = https://git.yoctoproject.org/git/meta-ti.git
 	branch = morty
 [submodule "meta-intel"]
 	path = meta-intel
-	url = http://mod.lge.com/hub/yocto/mirror/meta-intel.git
+	url = https://git.yoctoproject.org/git/meta-intel.git
 	branch = morty
