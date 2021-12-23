@@ -234,7 +234,6 @@ IMAGE_INSTALL_append = " \
     qmake-project \
     autotools-project \
     humidifier-project \
-    sqlite3logger \
 "
 
 INHIBIT_PACKAGE_DEBUG_SPLIT ?= "1"
