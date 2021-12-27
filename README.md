@@ -1,102 +1,145 @@
 # build-sample
 
-> Build Sample Project for meta-shift project
-
-
 ## About
 
-This project aims to provide the usage of meta-shift layer by providing the complete set of meta-layers.
+This project demonstrates how to configure the *meta-shift* layer with a Yocto based project and how to use its full features. This project is based on *poky*, a reference distribution of the Yocto project, with several well-known meta-layers and simple configurations in order for you to understand how it works easily.
+
+The meta-shift layer provides various useful features to support developers, including:
+
+* Code metrics
+* Static analysis
+* Host based unit testing
+* Code coverage
+* Mutation testing
+* Premirror/Shared state cache hit ratio
+* Bitbake recipe inspection
+* Bitbake environment/variable inspection
+* report generation (XML/HTML/JSON)
+
+You may refer to the following links to get more information.
+
+* meta-shift: https://github.com/shift-left-test/meta-shift
+* Yocto project: https://www.yoctoproject.org
 
 
-# Prerequisites
+## Structure
 
-## How to install the build host packages
+The top-level directory layout of the project
 
-    $ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool
+```bash
+.
+├── AUTHORS.md
+├── build-templates  # build-sample configuration template files
+├── CONTRIBUTING.md
+├── LICENSE
+├── meta-clang
+├── meta-freescale
+├── meta-intel
+├── meta-openembedded
+├── meta-qt5
+├── meta-raspberrypi
+├── meta-sample  # This directory contains a list of bitbake recipes for testing purpose
+├── meta-sample-test  # This directory contains a list of bitbake append files (.bbappend) to enable testing
+├── meta-shift  # The meta-shift layer
+├── meta-tegra
+├── poky  # The reference distribution of the Yocto project
+└── README.md
+```
 
+## Usage
 
-# Usage
+### Prerequisite
 
-## How to prepare the workspace
+To prepare your host environment, you can simply download a preconfigured dockerfile to start a docker container.
+
+    $ git clone https://github.com/shift-left-test/dockerfiles.git
+    $ cd dockerfiles
+    $ docker build -f yocto-dev/18.04/Dockerfile -t yocto-dev-18.04 .
+    $ docker run --rm -it yocto-dev-18.04
+
+To set up the build environment:
 
     $ git clone --recurse-submodules https://github.com/shift-left-test/build-sample.git
     $ cd build-sample
     $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
 
+Once completed successfully, the current working directory has been changed to *build* directory, which contains several configuration files. And you can call *bitbake* program from the CLI.
+```bash
+build
+└── conf
+    ├── bblayers.conf
+    ├── local.conf
+    └── templateconf.cfg
+```
 
-## How to enable tests
+### Enable/Disable features
 
-    $ bitbake-layers test-layers --add
+In order to seperate the testing environment from the production environment, you can toggle the meta-shift layer features by the following command.
 
+    $ bitbake-layers test-layers --add  # To enable features
+    $ bitbake-layers test-layers --remove  # To disable features
 
-## How to find testable recipes
-
-    $ bitbake-layers test-recipes
-
-
-## How to run tests per module
-
-    $ bitbake cmake-project -c test
-
-
-## How to measure code coverage per module
-
-    $ bitbake qmake5-project -c coverage
-
-
-## How to perform static analysis per module
-
-    $ bitbake autotools-project -c checkcode
-
-
-## How to run tests for all relevant modules
-
-    $ bitbake sqlite3logger -c testall
-    $ bitbake core-image-minimal -c testall
-
-
-## How to measure code coverage metrics for all relevant modules
-
-    $ bitbake sqlite3logger -c coverageall
-    $ bitbake core-image-minimal -c coverageall
-
-
-## How to perform static code analysis for all relevant modules
-
-    $ bitbake sqlite3logger -c checkcodeall
-    $ bitbake core-image-minimal -c checkcodeall
-
-
-## How to disable tests
-
-    $ bitbake-layers test-layers --remove
-
-
-# Additional Features
-
-## How to find testable recipes
+Once enabled, you can identify the list of testable recipes by the following command.
 
     $ bitbake-layers test-recipes
-    $ bitbake-layers test-recipes cmake*
 
-> You can use wildcard(&,*) for specified search.
+### Static analysis
+
+To perform static analysis testing on source code:
+
+    $ bitbake humidifier-project -c checkcode
+    $ bitbake humidifier-project -c checkcodeall  # For all relevant recipes
+    $ bitbake core-image-minimal -c checkcodeall  # For all relevant recipes of the image
+
+To perform static analysis testing on Bitbake scripts:
+
+    $ recipetool inspect humidifier-project
+
+### Unit testing
+
+To perform unit testing:
+
+    $ bitbake humidifier-project -c test
+    $ bitbake humidifier-project -c testall  # For all relevant recipes
+    $ bitbake core-image-minimal -c testall  # For all relevant recipes of the image
+
+To collect code coverage metric:
+
+    $ bitbake humidifier-porject -c coverage
+    $ bitbake humidifier-project -c coverageall  # For all relevant recipes
+    $ bitbake core-image-minimal -c coverageall  # For all relevant recipes of the image
+
+### Mutation testing
+
+    $ bitbake humidifier-project -c checktest
+    $ bitbake humidifier-project -c checktestall  # For all relevant recipes
+    $ bitbake core-image-minimal -c checktestall  # For all relevant recipes of the image
+
+### Cache hit ratio
+
+To identify the premirror/shared state cache hit ratio:
+
+    $ devtool cache humidifier-project
+
+### Report generation
+
+To generate report files of all software quality metrics:
+
+    $ bitbake humidifier-project -c report
+    $ bitbake humidifier-project -c reportall  # For all relevant recipes
+    $ bitbake core-image-minimal -c reportall  # For all relevant recipes of the image
+
+### Information retrieval
+
+You can get various recipe information including important paths, dependencies, inheritances, etc by the following command.
+
+    $ recipetool inspect humidifier-project
+
+You can get Bitbake environemnt variables and internal data by the following command.
+
+    $ devtool show -r humidifier-project S  # `S` can be anything you want to examine
 
 
-## How to find test meta-layers
-
-    $ bitbake-layers test-layers
-
-
-## How to show recipe information
-
-    $ recipetool inspect cmake-project
-
-
-## How to lint Bitbake recipes
-
-    $ recipetool check qmake5-project
-
-
-# Licenses
+## Licenses
 
 This project source code is available under MIT licnese. See [LICENSE](LICENSE).
