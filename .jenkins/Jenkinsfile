@@ -1,36 +1,3 @@
-pipeline {
-    agent {
-        docker {
-            image "cart.lge.com/swte/yocto-dev:18.04"
-        }
-    }
-    stages {
-        stage("Checkout") {
-            steps {
-                sh "git submodule update --init --recursive"
-            }
-        }
-        stage("Test") {
-            steps {
-                sh """#!/bin/bash
-                   TEMPLATECONF=${env.WORKSPACE}/build-templates source ${env.WORKSPACE}/poky/oe-init-build-env
-                   devtool show MACHINE
-                   devtool cache autoconf-native -fm
-                   bitbake-layers status
-                   bitbake-layers inspect meta
-                   bitbake-layers test-layers --add
-                   bitbake-layers test-recipes
-                   recipetool check core-image-minimal
-                   recipetool inspect core-image-minimal
-                   bitbake core-image-minimal
-                   bitbake core-image-minimal -c reportall
-                   """
-            }
-        }
-    }  // stages
-    post {
-        always {
-            cleanWs disableDeferredWipeout: true
-        }
-    }  // post
-}  // pipeline
+@Library('jenkins-shared-library') _
+
+buildSampleProject(linux: '18.04')
