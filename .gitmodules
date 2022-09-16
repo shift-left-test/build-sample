@@ -26,19 +26,3 @@
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
 	branch = thud
-[submodule "meta-tegra"]
-	path = meta-tegra
-	url = https://github.com/OE4T/meta-tegra.git
-	branch = thud
-[submodule "meta-freescale"]
-	path = meta-freescale
-	url = https://git.yoctoproject.org/git/meta-freescale.git
-	branch = thud
-[submodule "meta-ti"]
-	path = meta-ti
-	url = https://git.yoctoproject.org/git/meta-ti.git
-	branch = thud
-[submodule "meta-intel"]
-	path = meta-intel
-	url = https://git.yoctoproject.org/git/meta-intel.git
-	branch = thud
