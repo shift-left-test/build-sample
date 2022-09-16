@@ -26,7 +26,3 @@
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
 	branch = jethro
-[submodule "meta-intel"]
-	path = meta-intel
-	url = https://git.yoctoproject.org/git/meta-intel.git
-	branch = jethro
