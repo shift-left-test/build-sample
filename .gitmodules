@@ -26,18 +26,6 @@
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
 	branch = kirkstone
-[submodule "meta-tegra"]
-	path = meta-tegra
-	url = https://github.com/OE4T/meta-tegra.git
-	branch = kirkstone
-[submodule "meta-freescale"]
-	path = meta-freescale
-	url = https://git.yoctoproject.org/git/meta-freescale.git
-	branch = kirkstone
-[submodule "meta-intel"]
-	path = meta-intel
-	url = https://git.yoctoproject.org/git/meta-intel.git
-	branch = kirkstone
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
