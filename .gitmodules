@@ -26,18 +26,6 @@
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
 	branch = gatesgarth
-[submodule "meta-tegra"]
-	path = meta-tegra
-	url = https://github.com/OE4T/meta-tegra.git
-	branch = gatesgarth
-[submodule "meta-freescale"]
-	path = meta-freescale
-	url = https://git.yoctoproject.org/git/meta-freescale.git
-	branch = gatesgarth
-[submodule "meta-intel"]
-	path = meta-intel
-	url = https://git.yoctoproject.org/git/meta-intel.git
-	branch = gatesgarth
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
