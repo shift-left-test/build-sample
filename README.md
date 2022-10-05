@@ -54,8 +54,8 @@ To prepare your host environment, you can simply download a preconfigured docker
 
     $ git clone https://github.com/shift-left-test/dockerfiles.git
     $ cd dockerfiles
-    $ docker build -f yocto-dev/18.04/Dockerfile -t yocto-dev-18.04 .
-    $ docker run --rm -it yocto-dev-18.04
+    $ docker build -f yocto-dev/20.04/Dockerfile -t yocto-dev-20.04 .
+    $ docker run --rm -it yocto-dev-20.04
 
 To set up the build environment:
 
