@@ -61,7 +61,7 @@ To set up the build environment:
 
     $ git clone --recurse-submodules https://github.com/shift-left-test/build-sample.git
     $ cd build-sample
-    $ TEMPLATECONF=`pwd`/build-templates source poky/oe-init-build-env
+    $ TEMPLATECONF=`pwd`/meta-templates/conf/templates/build-templates source poky/oe-init-build-env
 
 Once completed successfully, the current working directory has been changed to *build* directory, which contains several configuration files. And you can call *bitbake* program from the CLI.
 ```bash
