@@ -1,11 +1,11 @@
 [submodule "poky"]
 	path = poky
 	url = https://git.yoctoproject.org/git/poky.git
-	branch = styhead
+	branch = walnascar
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = styhead
+	branch = walnascar
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
@@ -13,15 +13,15 @@
 [submodule "meta-sample"]
 	path = meta-sample
 	url = https://github.com/shift-left-test/meta-sample.git
-	branch = styhead
+	branch = walnascar
 [submodule "meta-sample-test"]
 	path = meta-sample-test
 	url = https://github.com/shift-left-test/meta-sample-test.git
-	branch = styhead
+	branch = walnascar
 [submodule "meta-shift"]
 	path = meta-shift
 	url = https://github.com/shift-left-test/meta-shift.git
-	branch = styhead
+	branch = walnascar
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
@@ -29,4 +29,4 @@
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
-	branch = styhead
+	branch = walnascar
