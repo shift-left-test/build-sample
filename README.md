@@ -37,7 +37,6 @@ The top-level directory layout of the project
 ├── meta-intel
 ├── meta-openembedded
 ├── meta-qt5
-├── meta-raspberrypi
 ├── meta-sample  # This directory contains a list of bitbake recipes for testing purpose
 ├── meta-sample-test  # This directory contains a list of bitbake append files (.bbappend) to enable testing
 ├── meta-shift  # The meta-shift layer

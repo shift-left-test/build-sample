@@ -22,10 +22,6 @@
 	path = meta-shift
 	url = https://github.com/shift-left-test/meta-shift.git
 	branch = mickledore
-[submodule "meta-raspberrypi"]
-	path = meta-raspberrypi
-	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
-	branch = mickledore
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
