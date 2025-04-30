@@ -22,10 +22,6 @@
 	path = meta-shift
 	url = https://github.com/shift-left-test/meta-shift.git
 	branch = scarthgap
-[submodule "meta-raspberrypi"]
-	path = meta-raspberrypi
-	url = https://git.yoctoproject.org/git/meta-raspberrypi.git
-	branch = scarthgap
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
