@@ -9,7 +9,7 @@
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
-	branch = master
+	branch = styhead
 [submodule "meta-sample"]
 	path = meta-sample
 	url = https://github.com/shift-left-test/meta-sample.git
