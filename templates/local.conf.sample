@@ -282,7 +282,8 @@ ACCEPT_FSL_EULA = "1"
 
 CONNECTIVITY_CHECK_URIS = ""
 
-INHERIT += "checkcache"
-
 require conf/distro/include/yocto-uninative.inc
+
+INHERIT += "uninative checkcache"
+
 include /etc/meta-shift/global.conf
