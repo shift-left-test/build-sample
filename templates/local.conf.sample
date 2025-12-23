@@ -284,4 +284,5 @@ CONNECTIVITY_CHECK_URIS = ""
 
 INHERIT += "checkcache"
 
+require conf/distro/include/yocto-uninative.inc
 include /etc/meta-shift/global.conf
