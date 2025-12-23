@@ -2,7 +2,7 @@
 
 ## About
 
-This project demonstrates how to configure the *meta-shift* layer with a Yocto based project and how to use its full features. This project is based on *poky*, a reference distribution of the Yocto project, with several well-known meta-layers and simple configurations in order for you to understand how it works easily.
+This project demonstrates how to configure the *meta-shift* layer with a Yocto based project and how to use its full features. This project is based on *openembedded-core*, a reference distribution of the Yocto project, with several well-known meta-layers and simple configurations in order for you to understand how it works easily.
 
 The meta-shift layer provides various useful features to support developers, including:
 
@@ -29,20 +29,18 @@ The top-level directory layout of the project
 ```bash
 .
 ├── AUTHORS.md
-├── build-templates  # build-sample configuration template files
+├── bitbake  # The bitbake build system
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── meta-clang
-├── meta-freescale
-├── meta-intel
 ├── meta-openembedded
 ├── meta-qt5
 ├── meta-sample  # This directory contains a list of bitbake recipes for testing purpose
 ├── meta-sample-test  # This directory contains a list of bitbake append files (.bbappend) to enable testing
 ├── meta-shift  # The meta-shift layer
-├── meta-tegra
-├── poky  # The reference distribution of the Yocto project
-└── README.md
+├── openembedded-core  # The reference distribution of the Yocto project
+├── README.md
+└── templates  # template configuration files
 ```
 
 ## Usage
@@ -60,7 +58,7 @@ To set up the build environment:
 
     $ git clone --recurse-submodules https://github.com/shift-left-test/build-sample.git
     $ cd build-sample
-    $ TEMPLATECONF=`pwd`/meta-templates/conf/templates/build-templates source poky/oe-init-build-env
+    $ TEMPLATECONF=`pwd`/templates source openembedded-core/oe-init-build-env build
 
 Once completed successfully, the current working directory has been changed to *build* directory, which contains several configuration files. And you can call *bitbake* program from the CLI.
 ```bash
