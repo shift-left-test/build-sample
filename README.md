@@ -38,9 +38,9 @@ The top-level directory layout of the project
 ├── meta-sample  # This directory contains a list of bitbake recipes for testing purpose
 ├── meta-sample-test  # This directory contains a list of bitbake append files (.bbappend) to enable testing
 ├── meta-shift  # The meta-shift layer
+├── meta-templates  # build-sample configuration template files
 ├── openembedded-core  # The reference distribution of the Yocto project
-├── README.md
-└── templates  # template configuration files
+└── README.md
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ To set up the build environment:
 
     $ git clone --recurse-submodules https://github.com/shift-left-test/build-sample.git
     $ cd build-sample
-    $ TEMPLATECONF=`pwd`/templates source openembedded-core/oe-init-build-env build
+    $ TEMPLATECONF=`pwd`/meta-templates/conf/templates/build-templates source openembedded-core/oe-init-build-env build
 
 Once completed successfully, the current working directory has been changed to *build* directory, which contains several configuration files. And you can call *bitbake* program from the CLI.
 ```bash
