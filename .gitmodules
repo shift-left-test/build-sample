@@ -1,32 +1,32 @@
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = walnascar
+	branch = whinlatter
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
-	branch = walnascar
+	branch = master
 [submodule "meta-sample"]
 	path = meta-sample
 	url = https://github.com/shift-left-test/meta-sample.git
-	branch = walnascar
+	branch = whinlatter
 [submodule "meta-sample-test"]
 	path = meta-sample-test
 	url = https://github.com/shift-left-test/meta-sample-test.git
-	branch = walnascar
+	branch = whinlatter
 [submodule "meta-shift"]
 	path = meta-shift
 	url = https://github.com/shift-left-test/meta-shift.git
-	branch = walnascar
+	branch = whinlatter
 [submodule "meta-clang"]
 	path = meta-clang
 	url = https://github.com/kraj/meta-clang.git
-	branch = walnascar
+	branch = master
 [submodule "bitbake"]
 	path = bitbake
 	url = https://github.com/openembedded/bitbake.git
-	branch = 2.12
+	branch = 2.16
 [submodule "openembedded-core"]
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
-	branch = walnascar
+	branch = whinlatter
