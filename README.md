@@ -6,12 +6,9 @@ This project demonstrates how to configure the *meta-shift* layer with a Yocto b
 
 The meta-shift layer provides various useful features to support developers, including:
 
-* Code metrics
-* Static analysis
 * Host based unit testing
 * Code coverage
 * Mutation testing
-* Premirror/Shared state cache hit ratio
 * Bitbake recipe inspection
 * Bitbake environment/variable inspection
 * report generation (XML/HTML/JSON)
@@ -82,12 +79,6 @@ Once enabled, you can identify the list of testable recipes by the following com
 
 ### Static analysis
 
-To perform static analysis testing on source code:
-
-    $ bitbake humidifier-project -c checkcode
-    $ bitbake humidifier-project -c checkcodeall  # For all relevant recipes
-    $ bitbake core-image-minimal -c checkcodeall  # For all relevant recipes of the image
-
 To perform static analysis testing on Bitbake scripts:
 
     $ recipetool inspect humidifier-project
@@ -111,12 +102,6 @@ To collect code coverage metric:
     $ bitbake humidifier-project -c checktest
     $ bitbake humidifier-project -c checktestall  # For all relevant recipes
     $ bitbake core-image-minimal -c checktestall  # For all relevant recipes of the image
-
-### Cache hit ratio
-
-To identify the premirror/shared state cache hit ratio:
-
-    $ devtool cache humidifier-project
 
 ### Report generation
 

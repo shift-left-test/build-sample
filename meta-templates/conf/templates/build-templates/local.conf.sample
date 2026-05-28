@@ -284,6 +284,6 @@ CONNECTIVITY_CHECK_URIS = ""
 
 require conf/distro/include/yocto-uninative.inc
 
-INHERIT += "uninative checkcache"
+INHERIT += "uninative"
 
 include /etc/meta-shift/global.conf
