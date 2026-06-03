@@ -103,13 +103,13 @@ To collect code coverage metric:
     $ bitbake humidifier-project -c checktestall  # For all relevant recipes
     $ bitbake core-image-minimal -c checktestall  # For all relevant recipes of the image
 
-### Report generation
+### Verification
 
-To generate report files of all software quality metrics:
+To run all software quality verification tasks (test, coverage, mutation):
 
-    $ bitbake humidifier-project -c report
-    $ bitbake humidifier-project -c reportall  # For all relevant recipes
-    $ bitbake core-image-minimal -c reportall  # For all relevant recipes of the image
+    $ bitbake humidifier-project -c verify
+    $ bitbake humidifier-project -c verifyall  # For all relevant recipes
+    $ bitbake core-image-minimal -c verifyall  # For all relevant recipes of the image
 
 ### Information retrieval
 
