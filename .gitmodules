@@ -2,10 +2,6 @@
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
 	branch = mickledore
-[submodule "meta-qt5"]
-	path = meta-qt5
-	url = https://github.com/meta-qt5/meta-qt5.git
-	branch = mickledore
 [submodule "meta-sample"]
 	path = meta-sample
 	url = https://github.com/shift-left-test/meta-sample.git
@@ -30,3 +26,7 @@
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = mickledore
+[submodule "meta-qt6"]
+	path = meta-qt6
+	url = https://code.qt.io/yocto/meta-qt6.git
+	branch = 6.9
