@@ -12,7 +12,7 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-openembedded/meta-python \
   ##OEROOT##/../meta-openembedded/meta-networking \
   ##OEROOT##/../meta-clang \
-  ##OEROOT##/../meta-qt5 \
+  ##OEROOT##/../meta-qt6 \
   ##OEROOT##/../meta-shift \
   ##OEROOT##/../meta-sample \
   "
